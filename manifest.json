@@ -1,0 +1,12 @@
+{
+    "name": "word meanig of the day",
+    "description": "open new tab and search for meaning of a word easly just by opening new tab you will have fully qualified dictionary",
+    "version": "1.0",
+    "manifest_version": 3,
+    "chrome_url_overrides" : {
+      "newtab": "newtab.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }

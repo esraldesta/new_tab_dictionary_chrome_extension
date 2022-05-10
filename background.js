@@ -2,7 +2,7 @@ console.log("this is from background");
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     console.log("recived message");
     console.log(message);
-    setTimeout(()=>{
+   
         fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${message.name}?key=PUT YOUR API KEY HEAR`) //PUT YOUR API KEY HEAR
         .then(response => response.json())
         .then(data => {
@@ -13,7 +13,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         
         })
         .catch(err => console.error(err));
-    },10000)
+    
 
 
     // sendResponse("message")
